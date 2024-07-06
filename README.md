@@ -3,4 +3,4 @@
 REQUIRED PACKAGES:
 - flask
 
-This is a web application to allow members of the public to view various pieces of infomration about wind farms across the UK.
+This is a web application to allow members of the public to view various pieces of infomration about wind farms across the UK, in a simple and easy-to-understand way.

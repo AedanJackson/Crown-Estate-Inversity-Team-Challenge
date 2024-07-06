@@ -56,6 +56,27 @@
 }
 
 .about-text {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin: 40px 80px;
+}
+
+.about-text hr {
+    background-color: #B8C9D8;
+    height: 2px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .column {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .about-text {
+        margin: 20px 20px;
+    }
 }
