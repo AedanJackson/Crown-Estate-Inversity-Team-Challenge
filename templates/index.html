@@ -1,12 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
-    {% for post in posts %}
-    <a href="{{ url_for('post', post_id=post['id']) }}">
-        <h2>{{ post['title'] }}</h2>
-    </a>
-    <span class = "badge badge-primary"> {{ post ['created'] }}</span>
-    <hr>
-    {% endfor %}
+<head>
+    <title>Wind Farm Explorer | By The Crown Estate</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div id="info"></div>
+        </div>
+        <div class="column">
+            <div id="map">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+</body>
+
+
+
 {% endblock %}

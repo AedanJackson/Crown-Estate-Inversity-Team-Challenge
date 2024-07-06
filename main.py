@@ -1,33 +1,21 @@
-import sqlite3
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from werkzeug.exceptions import abort
+from wind_farms import wind_farms, proposed_wind_farms
 app = Flask(__name__)
+
+
+@app.route('/get_wind_farms')
+def get_wind_farms():
+    return jsonify(wind_farms)
+
+@app.route('/get_proposed_wind_farms')
+def get_proposed_wind_farms():
+    return jsonify(proposed_wind_farms)
 
 # routing the decorator function hello_name
 @app.route('/')
 def index():
-    conn = get_db_connection()
-    posts = conn.execute('SELECT * FROM posts').fetchall()
-    return render_template('index.html', posts = posts)
-
-@app.route('/<int:post_id>')
-def post(post_id):
-    post = get_post(post_id)
-    return render_template('post.html', post = post)
-
-def get_post(post_id):
-    conn = get_db_connection()
-    post = conn.execute('SELECT * FROM posts WHERE id = ?',
-                        (post_id,)).fetchone()
-    conn.close()
-    if post is None:
-        abort(404)
-    return post
-
-def get_db_connection():
-    conn = sqlite3.connect('database.db')
-    conn.row_factory = sqlite3.Row
-    return conn
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug = True)

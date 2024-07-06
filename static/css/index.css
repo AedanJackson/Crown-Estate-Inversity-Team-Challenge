@@ -1,0 +1,38 @@
+#map {          
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.column {
+    flex: 1;
+    margin: 10px;
+    width: 50%
+}
+
+.data-point {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.data-point img {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+
+}
+.data-point-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.data-point-text p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+}
