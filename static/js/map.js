@@ -79,6 +79,7 @@ function createMarker(latitude, longitude, iconUrl, windFarm, proposed) {
     });
 }
 
+
 // Fetch actual wind farm data
 fetch('/get_wind_farms')
     .then(response => response.json())

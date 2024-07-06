@@ -62,6 +62,7 @@
 .about-text hr {
     background-color: #B8C9D8;
     height: 2px;
+    border-radius: 0;
 }
 
 @media (max-width: 768px) {
