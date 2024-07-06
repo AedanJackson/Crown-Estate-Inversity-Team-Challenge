@@ -7,12 +7,10 @@ CREATE TABLE IF NOT EXISTS Feedback (
 )
 """
 
-def connect_db():
+def connect_db(sql_string):
     conn = sqlite3.connect("WindFarms.db")
-    c = conn.cursor
+    c = conn.cursor()
     with conn:
         c.execute(sql_string)
 
-connect_db()
-
-    
+connect_db(sql_string)

@@ -11,17 +11,39 @@
 <body>
     <div class="container">
         <div class="column">
-            <div id="info"></div>
+            <div id="info">
+                <h3>Click a wind farm location on the map to see information about it.</h3>
+            </div>
         </div>
         <div class="column">
-            <div id="map">
+            <div>
+                <div id="map"></div>
+                <div>
+                    <h4>Key</h4>
+                    <div class="key-item">
+                        <img src="/static/img/green-location-marker.svg" class="green location marker"/>
+                        <p>Existing wind farm</p>
+                    </div>
+                    <div class="key-item">
+                        <img src="/static/img/orange-location-marker.svg" class="orange location marker"/>
+                        <p>Proposed new location</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <!-- <div class="about-text">
+            <h4 class="navy-text">About this project</h4>
+            <p>Welcome to the Wind Farm Explorer, a powerful tool from the Crown Estate designed to provide comprehensive insights into the wind farms located in the oceans surrounding the United Kingdom.</p>
+    
+            <p>You can view information and data about current wind farms, see proposed new wind farms and give your feedback on them if you wish.</p>
+                
+            <p>We hope this will be an invaluable resource for anyone interested in renewable energy, environmental science, or marine conservation. Whether you’re a researcher, a policy maker, or just a curious citizen, this tool offers a wealth of information at your fingertips.</p>
+        </div> -->
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="{{ url_for('static', filename='js/map.js') }}"></script>
 </body>
-
 
 
 {% endblock %}
